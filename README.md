@@ -20,23 +20,44 @@ A full-stack URL shortener application built with **React** (frontend) and **Nod
 ```
 
 22HT1A4422/
-├─ frontend/
-│  ├─ src/
-│  │  ├─ components/
-│  │  ├─ pages/
-│  │  ├─ utils/
-│  │  ├─ App.jsx
-│  │  └─ index.js
-│  └─ package.json
-├─ backend/
-│  ├─ src/
-│  │  ├─ controllers/
-│  │  ├─ middlewares/
-│  │  ├─ models/
-│  │  ├─ routes/
-│  │  └─ index.js
-│  └─ package.json
-└─ README.md
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── url.controller.js      # Logic to handle requests (create, redirect, get stats)
+│   │   ├── models/
+│   │   │   └── url.model.js           # Defines the data structure for a URL
+│   │   ├── routes/
+│   │   │   └── url.routes.js          # Defines API endpoints (e.g., /shorturls)
+│   │   └── index.js                   # Main server file (entry point)
+│   ├── .env                           # Environment variables (e.g., PORT)
+│   ├── .gitignore                     # To ignore node_modules
+│   └── package.json                   # Backend dependencies and scripts
+│
+├── frontend/
+│   ├── public/
+│   │   └── index.html                 # The single HTML page for your React app
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── UrlInput.jsx           # Reusable component for a single URL input form
+│   │   │   ├── StatsTable.jsx         # Component to display click statistics in a table
+│   │   │   └── Navbar.jsx             # Navigation component
+│   │   ├── pages/
+│   │   │   ├── ShortenerPage.jsx      # Page for creating short URLs
+│   │   │   └── StatisticsPage.jsx     # Page for viewing URL statistics
+│   │   ├── services/
+│   │   │   └── api.js                 # Centralized functions for making API calls to the backend
+│   │   ├── App.jsx                    # Main application component with routing
+│   │   ├── index.css                  # Global CSS styles
+│   │   └── main.jsx                   # The entry point for the React application
+│   ├── .gitignore                     # To ignore node_modules
+│   └── package.json                   # Frontend dependencies (React, Material-UI) and scripts
+│
+├── logging-middleware/
+│   ├── index.js                       # The main file exporting your Log() function
+│   ├── .gitignore                     # To ignore node_modules, if any
+│   └── package.json                   # Defines this as a reusable package
+│
+└── README.md                          # Project documentation
 
 ````
 
@@ -56,7 +77,7 @@ A full-stack URL shortener application built with **React** (frontend) and **Nod
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/22HT1A4422.git
+git clone https://github.com/Sivaji4829/22HT1A4422.git
 cd 22HT1A4422
 ````
 
@@ -94,7 +115,7 @@ cd frontend
 npm run dev
 ```
 
-Runs on **[http://localhost:5173](http://localhost:5173)** (or **[http://localhost:3000](http://localhost:3000)** if configured)
+Runs on  **[http://localhost:3000](http://localhost:3000)** 
 
 ---
 
