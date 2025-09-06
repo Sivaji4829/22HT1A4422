@@ -1,24 +1,18 @@
-```markdown
-# URL Shortener Project
+URL Shortener Project
+A full-stack URL shortener application built with React (frontend) and Node.js + Express (backend). Users can create short URLs, track analytics, and manage URL expiry.
 
-A full-stack URL shortener application built with **React** (frontend) and **Node.js + Express** (backend). Users can create short URLs, track analytics, and manage URL expiry.
+Features
+Shorten long URLs with optional custom shortcodes
 
----
+Set validity period for short URLs
 
-## Features
+Track analytics: total clicks, timestamp, referrer, IP
 
-- Shorten long URLs with optional custom shortcodes  
-- Set validity period for short URLs  
-- Track analytics: total clicks, timestamp, referrer, IP  
-- Redirect short URLs to the original URLs  
-- Clean and responsive UI using Material-UI  
+Redirect short URLs to the original URLs
 
----
+Clean and responsive UI using Material-UI
 
-## Folder Structure
-
-```
-
+Folder Structure
 22HT1A4422/
 ├── backend/
 │   ├── src/
@@ -59,91 +53,87 @@ A full-stack URL shortener application built with **React** (frontend) and **Nod
 │
 └── README.md                          # Project documentation
 
-````
+Technologies Used
+Frontend: React, React Router, Material-UI, Axios
 
----
+Backend: Node.js, Express, NanoID
 
-## Technologies Used
+Logging: Custom logging middleware using Axios
 
-- **Frontend:** React, React Router, Material-UI, Axios  
-- **Backend:** Node.js, Express, NanoID  
-- **Logging:** Custom logging middleware using Axios  
-- **Version Control:** Git  
+Version Control: Git
 
----
+Installation
+Clone the repository:
 
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Sivaji4829/22HT1A4422.git
+git clone [https://github.com/Sivaji4829/22HT1A4422.git](https://github.com/Sivaji4829/22HT1A4422.git)
 cd 22HT1A4422
-````
 
-2. Install backend dependencies:
+Install backend dependencies:
 
-```bash
 cd backend
 npm install
-```
 
-3. Install frontend dependencies:
+Install frontend dependencies:
 
-```bash
 cd ../frontend
 npm install
-```
 
----
-
-## Running the Project
-
-### Backend
-
-```bash
+Running the Project
+Backend
 cd backend
 npm run dev
-```
 
-Runs on **[http://localhost:5000](http://localhost:5000)**
+Runs on http://localhost:5000
 
-### Frontend
-
-```bash
+Frontend
 cd frontend
 npm run dev
-```
 
-Runs on  **[http://localhost:3000](http://localhost:3000)** 
+Runs on http://localhost:3000
 
----
+API Endpoints
+Method
 
-## API Endpoints
+Endpoint
 
-| Method | Endpoint                | Description                        |
-| ------ | ----------------------- | ---------------------------------- |
-| POST   | `/shorturls`            | Create a new short URL             |
-| GET    | `/shorturls/:shortcode` | Get stats for a specific short URL |
-| GET    | `/:shortcode`           | Redirect to original URL           |
-| GET    | `/shorturls`            | Get all URLs and their stats       |
+Description
 
-**Example Request:**
+POST
 
-```json
+/shorturls
+
+Create a new short URL
+
+GET
+
+/shorturls/:shortcode
+
+Get stats for a specific short URL
+
+GET
+
+/:shortcode
+
+Redirect to original URL
+
+GET
+
+/shorturls
+
+Get all URLs and their stats
+
+Example Request:
+
 POST /shorturls
 {
-  "url": "https://example.com/long-url",
+  "url": "[https://example.com/long-url](https://example.com/long-url)",
   "validity": 30,
   "shortcode": "myfirst"
 }
-```
 
-**Example Response:**
+Example Response:
 
-```json
 {
   "shortLink": "http://localhost:5000/myfirst",
-  "expiry": "2025-09-06T07:00:07.411Z"
+  "expiry": "2025-10-06T13:04:07.411Z"
 }
-```
