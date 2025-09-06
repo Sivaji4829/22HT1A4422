@@ -1,5 +1,3 @@
-Of course. Here is the polished and well-formatted `README.md` file for your project.
-
 ```markdown
 # URL Shortener Project
 > A full-stack application by **Sivaji Chinnam (22HT1A4422)**
