@@ -1,139 +1,159 @@
-URL Shortener Project
-A full-stack URL shortener application built with React (frontend) and Node.js + Express (backend). Users can create short URLs, track analytics, and manage URL expiry.
+Of course. Here is the polished and well-formatted `README.md` file for your project.
 
-Features
-Shorten long URLs with optional custom shortcodes
+```markdown
+# URL Shortener Project
+> A full-stack application by **Sivaji Chinnam (22HT1A4422)**
 
-Set validity period for short URLs
+A full-stack URL shortener application built with **React** for the frontend and **Node.js + Express** for the backend. This project allows users to create short URLs, track usage analytics, and manage URL expiry.
 
-Track analytics: total clicks, timestamp, referrer, IP
+---
 
-Redirect short URLs to the original URLs
+## ✨ Features
 
-Clean and responsive UI using Material-UI
+-   **Shorten URLs**: Convert long URLs into concise links.
+-   **Custom Shortcodes**: Users can suggest an optional custom shortcode for their link.
+-   **URL Expiry**: Set a validity period (in minutes) for how long a short link remains active.
+-   **Click Analytics**: Track the total number of clicks, along with the timestamp, referrer, and location for each click.
+-   **Seamless Redirection**: Automatically redirects short URLs to their original destination.
+-   **Responsive UI**: A clean and modern user interface built with Material-UI that works on all devices.
 
-Folder Structure
+---
+
+## 🛠️ Technologies Used
+
+-   **Frontend**: React, React Router, Material-UI, Axios
+-   **Backend**: Node.js, Express.js
+-   **Unique ID Generation**: NanoID
+-   **Logging**: Custom Logging Middleware
+-   **Version Control**: Git & GitHub
+
+---
+
+## 📂 Folder Structure
+
+The project is organized in a monorepo structure with three main folders: `backend`, `frontend`, and `logging-middleware`.
+
+```
+
 22HT1A4422/
 ├── backend/
 │   ├── src/
 │   │   ├── controllers/
-│   │   │   └── url.controller.js      # Logic to handle requests (create, redirect, get stats)
+│   │   │   └── url.controller.js
 │   │   ├── models/
-│   │   │   └── url.model.js           # Defines the data structure for a URL
+│   │   │   └── url.model.js
 │   │   ├── routes/
-│   │   │   └── url.routes.js          # Defines API endpoints (e.g., /shorturls)
-│   │   └── index.js                   # Main server file (entry point)
-│   ├── .env                           # Environment variables (e.g., PORT)
-│   ├── .gitignore                     # To ignore node_modules
-│   └── package.json                   # Backend dependencies and scripts
+│   │   │   └── url.routes.js
+│   │   └── index.js
+│   ├── .env
+│   ├── .gitignore
+│   └── package.json
 │
 ├── frontend/
 │   ├── public/
-│   │   └── index.html                 # The single HTML page for your React app
+│   │   └── index.html
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── UrlInput.jsx           # Reusable component for a single URL input form
-│   │   │   ├── StatsTable.jsx         # Component to display click statistics in a table
-│   │   │   └── Navbar.jsx             # Navigation component
+│   │   │   ├── UrlInput.jsx
+│   │   │   ├── StatsTable.jsx
+│   │   │   └── Navbar.jsx
 │   │   ├── pages/
-│   │   │   ├── ShortenerPage.jsx      # Page for creating short URLs
-│   │   │   └── StatisticsPage.jsx     # Page for viewing URL statistics
+│   │   │   ├── ShortenerPage.jsx
+│   │   │   └── StatisticsPage.jsx
 │   │   ├── services/
-│   │   │   └── api.js                 # Centralized functions for making API calls to the backend
-│   │   ├── App.jsx                    # Main application component with routing
-│   │   ├── index.css                  # Global CSS styles
-│   │   └── main.jsx                   # The entry point for the React application
-│   ├── .gitignore                     # To ignore node_modules
-│   └── package.json                   # Frontend dependencies (React, Material-UI) and scripts
+│   │   │   └── api.js
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   └── package.json
 │
 ├── logging-middleware/
-│   ├── index.js                       # The main file exporting your Log() function
-│   ├── .gitignore                     # To ignore node_modules, if any
-│   └── package.json                   # Defines this as a reusable package
+│   ├── index.js
+│   └── package.json
 │
-└── README.md                          # Project documentation
+└── README.md
 
-Technologies Used
-Frontend: React, React Router, Material-UI, Axios
+````
 
-Backend: Node.js, Express, NanoID
+---
 
-Logging: Custom logging middleware using Axios
+## 🚀 Getting Started
 
-Version Control: Git
+### Prerequisites
 
-Installation
-Clone the repository:
+Make sure you have the following installed on your system:
+* [Node.js](https://nodejs.org/en/) (v18 or higher)
+* [npm](https://www.npmjs.com/) (Node Package Manager)
+* [Git](https://git-scm.com/)
 
-git clone [https://github.com/Sivaji4829/22HT1A4422.git](https://github.com/Sivaji4829/22HT1A4422.git)
-cd 22HT1A4422
+### Installation
 
-Install backend dependencies:
+1.  Clone the repository to your local machine:
+    ```bash
+    git clone [https://github.com/Sivaji4829/22HT1A4422.git](https://github.com/Sivaji4829/22HT1A4422.git)
+    cd 22HT1A4422
+    ```
 
-cd backend
-npm install
+2.  Install backend dependencies:
+    ```bash
+    cd backend
+    npm install
+    ```
 
-Install frontend dependencies:
+3.  Install frontend dependencies:
+    ```bash
+    cd ../frontend
+    npm install
+    ```
 
-cd ../frontend
-npm install
+### Running the Application
 
-Running the Project
-Backend
-cd backend
-npm run dev
+You'll need to run the backend and frontend servers in two separate terminals.
 
-Runs on http://localhost:5000
+1.  **Start the Backend Server:**
+    ```bash
+    cd backend
+    npm run dev 
+    ```
+    > The backend will be running on **http://localhost:5000**
 
-Frontend
-cd frontend
-npm run dev
+2.  **Start the Frontend Development Server:**
+    ```bash
+    cd frontend
+    npm run dev
+    ```
+    > The frontend will be running on **http://localhost:3000**
 
-Runs on http://localhost:3000
+---
 
-API Endpoints
-Method
+## 🔌 API Endpoints
 
-Endpoint
+| Method | Endpoint                  | Description                        |
+| :----- | :------------------------ | :--------------------------------- |
+| `POST` | `/shorturls`              | Create a new short URL.            |
+| `GET`  | `/shorturls/:shortcode`   | Get stats for a specific short URL.|
+| `GET`  | `/:shortcode`             | Redirect to the original URL.      |
+| `GET`  | `/shorturls`              | Get all URLs and their stats.      |
 
-Description
+#### **Example Request Body:** `POST /shorturls`
 
-POST
-
-/shorturls
-
-Create a new short URL
-
-GET
-
-/shorturls/:shortcode
-
-Get stats for a specific short URL
-
-GET
-
-/:shortcode
-
-Redirect to original URL
-
-GET
-
-/shorturls
-
-Get all URLs and their stats
-
-Example Request:
-
-POST /shorturls
+```json
 {
-  "url": "[https://example.com/long-url](https://example.com/long-url)",
+  "url": "[https://example.com/a-very-long-url-to-be-shortened](https://example.com/a-very-long-url-to-be-shortened)",
   "validity": 30,
-  "shortcode": "myfirst"
+  "shortcode": "custom"
 }
+````
 
-Example Response:
+#### **Example Success Response:**
 
+```json
 {
-  "shortLink": "http://localhost:5000/myfirst",
-  "expiry": "2025-10-06T13:04:07.411Z"
+  "shortLink": "http://localhost:5000/custom",
+  "expiry": "2025-09-06T07:30:00.000Z"
 }
+```
+
+```
+```
